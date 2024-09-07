@@ -18,7 +18,7 @@ local plane = Scene:add_circle({
     parent = plane,
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/plane.png",
+    image = "~/packages/@frosoto/scripts/assets/textures/plane.png",
     size = 0.00075,
     color = Color:hex(0xffffff),
     light = {
@@ -62,7 +62,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/liam.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/liam.webp",
     size = 0.0000275,
     color = Color:hex(0xffffff),
     light = {
@@ -83,7 +83,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/bryce.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/bryce.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -104,7 +104,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/folder.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/folder.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -125,7 +125,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/amelia.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/amelia.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -146,7 +146,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/charlotte.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/charlotte.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -167,7 +167,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/taylor.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/taylor.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -188,7 +188,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/atom.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/atom.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -209,7 +209,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/circle.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/circle.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -230,7 +230,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/stone.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/stone.webp",
     size = 0.00003,
     color = Color:hex(0xffffff),
     light = {
@@ -251,7 +251,7 @@ end;Scene:add_hinge_at_world_point({
     }),
     local_position = vec2(0,0),
     local_angle = 0,
-    image = "~/packages/@frosoto/assets/textures/airy.webp",
+    image = "~/packages/@frosoto/scripts/assets/textures/airy.webp",
     size = 0.0015,
     color = Color:hex(0xffffff),
     light = {

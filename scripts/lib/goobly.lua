@@ -1,7 +1,7 @@
 local controller = Scene:add_component({
     name = "Goobly Controller",
     id = "@frosty/goobly/controller",
-    code = require('./scripts/@frosty/goobly/controller.lua', 'string'),
+    code = require('./packages/@frosoto/scripts/lib/controller.lua', 'string'),
 })
 local function spawn_goobly(pos)
     local goobly = Scene:add_box({

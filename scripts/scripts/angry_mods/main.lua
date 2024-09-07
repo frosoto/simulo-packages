@@ -4,11 +4,11 @@ local density = 0.005
 local hash = Scene:add_component({
     name = "Slingshot Launcher",
     id = "@frosty/angry_mods/slingshot",
-    code = require('./packages/@frosoto/scripts/lib/slingshot.lua', string)
+    code = require('./packages/@frosoto/scripts/lib/slingshot.lua', 'string')
 });local debris = Scene:add_component({
     name = "Debris Destroyer",
     id = "@frosty/angry_mods/debris_destroyer",
-    code = require('./packages/@frosoto/scripts/lib/debris.lua')
+    code = require('./packages/@frosoto/scripts/lib/debris.lua', 'string')
 });Scene:reset():add_component(debris)
 Scene.background_color = 0x34213d
 Scene:set_gravity(vec2(0, -9.805))

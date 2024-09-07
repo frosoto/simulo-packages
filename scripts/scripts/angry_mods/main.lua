@@ -86,7 +86,7 @@ simulon(-3, -6, 0xe55f50, 0.025); simulon(-3, -5, 0x5bc0fa, 0.01); simulon(-3, -
             code = [[
                 local exploded = false; local seconds = 0;
                 function on_collision_start(data)
-                    if data.other:get_name() == "debris" and data.other:get_body_type() == BodyType.Dynamic and self.color ~= 0xff0000 and self:temp_get_is_static() == false then
+                    if data.other:get_name() == "debris" and data.other:get_body_type() == BodyType.Dynamic and self.color ~= 0xff0000 and self:get_body_type() == BodyType.Dynamic then
                         Scene:explode({
                             position = self:get_position(),
                             radius = 0.025,

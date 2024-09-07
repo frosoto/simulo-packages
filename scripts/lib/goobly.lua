@@ -69,5 +69,4 @@ local function spawn_goobly(pos)
         object_b = goobly,
     });
 end;
-
 return spawn_goobly;

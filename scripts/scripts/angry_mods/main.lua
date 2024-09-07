@@ -105,8 +105,8 @@ simulon(-3, -6, 0xe55f50, 0.025); simulon(-3, -5, 0x5bc0fa, 0.01); simulon(-3, -
                 end
             ]]
         }))
-        v:temp_set_is_static(true)
-    elseif v:get_name() == "Simulon Head" and v.color == Color:hex(0xe9c937) then
+        v:set_body_type(BodyType.Kinematic)
+    elseif v:get_name() == "Simulon Head" and v:get_color() == Color:hex(0xe9c937) then
         v:add_component(Scene:add_component({
             name = "Chuck",
             id = "@frosty/angry_mods/chuck",
@@ -119,7 +119,7 @@ simulon(-3, -6, 0xe55f50, 0.025); simulon(-3, -5, 0x5bc0fa, 0.01); simulon(-3, -
             ]]
         }))
         v:set_body_type(BodyType.Kinematic)
-    elseif string.sub(v:get_name(), 1, 7) == "Simulon" and v.color == Color:hex(0x5bc0fa) then
+    elseif string.sub(v:get_name(), 1, 7) == "Simulon" and v:get_color() == Color:hex(0x5bc0fa) then
         v:add_component(Scene:add_component({
             name = "The Blues",
             id = "@frosty/angry_mods/blues",

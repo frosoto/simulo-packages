@@ -79,7 +79,8 @@ simulon(42 / 2, -19 / 2, 0xa9bc67, 0.01);simulon(32 / 2, -19 / 2, 0xa9bc67, 0.01
 simulon(42 / 2, 19 / 2, 0xa9bc67, 0.01); simulon(32 / 2, 19 / 2, 0xa9bc67, 0.01);simulon(34.5 / 2, 34 / 2, 0xa9bc67, 0.01); simulon(42 / 2, 35 / 2, 0xa9bc67, 0.01);
 --simulon(32 / 2, -12 / 2, 0xa9bc67); simulon(37 / 2, 25 / 2, 0xa9bc67);
 simulon(-3, -6, 0xe55f50, 0.025); simulon(-3, -5, 0x5bc0fa, 0.01); simulon(-3, -4, 0xe9c937, 0.005); simulon(-3, -3, 0x1e1f3d, 0.025); for i,v in ipairs(Scene:get_all_objects()) do
-    if v:get_name() == "Simulon Head" and v.color == Color:hex(0x1e1f3d) then
+    if v:get_name() == "Simulon Head" and v:get_color() == Color:hex(0x1e1f3d) then
+        v:set_body_type(BodyType.Kinematic)
         v:add_component(Scene:add_component({
             name = "Bomb",
             id = "@frosty/angry_mods/bomb",
@@ -105,7 +106,6 @@ simulon(-3, -6, 0xe55f50, 0.025); simulon(-3, -5, 0x5bc0fa, 0.01); simulon(-3, -
                 end
             ]]
         }))
-        v:set_body_type(BodyType.Kinematic)
     elseif v:get_name() == "Simulon Head" and v:get_color() == Color:hex(0xe9c937) then
         v:add_component(Scene:add_component({
             name = "Chuck",

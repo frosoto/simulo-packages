@@ -44,7 +44,7 @@ function on_pointer_down(point)
                         parent = hits[1],
                         local_position = vec2(0,0),
                         local_angle = 0,
-                        image = "~/packages/@frosoto/scripts/tools/gravity/icon.png",
+                        image = "~/packages/@frosoto/epic_tools/tools/gravity/icon.png",
                         size = 0.00075,
                         color = Color:hex(0xffffff),
                         light = {
@@ -72,7 +72,7 @@ function on_pointer_down(point)
                     parent = well,
                     local_position = vec2(0,0),
                     local_angle = 0,
-                    image = "~/packages/@frosoto/scripts/tools/gravity/icon.png",
+                    image = "~/packages/@frosoto/epic_tools/tools/gravity/icon.png",
                     size = 0.00075,
                     color = Color:hex(0xffffff),
                     light = {

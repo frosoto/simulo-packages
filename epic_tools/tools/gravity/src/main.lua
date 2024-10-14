@@ -2,11 +2,16 @@ local code = [[
     local mass = self:get_mass()
     function on_step()
         Scene:explode({
-            position = self:get_position() + vec2(0,mass * 0.15),
-            radius = 4.25 * mass,
-            impulse = -0.3 * mass
+            position = self:get_position(),
+            radius = 4.5 * mass,
+            impulse = -0.2 * mass
         })
-        self:set_linear_velocity(vec2(0,0))
+        --self:set_linear_velocity(vec2(0,0));
+        for i,v in ipairs(Scene:get_objects_in_circle({position=self:get_position(),radius=2.25*mass})) do
+            if v ~= self then
+                v:apply_force_to_center(-Scene:get_gravity()*v:get_mass());
+            end
+        end
     end
 ]]
 function on_update()
@@ -54,15 +59,17 @@ function on_pointer_down(point)
                     });
                 end
             else
+                local radius = 0.45
+                if Input:key_pressed('ShiftLeft') then
+                    radius = 0.9
+                end
                 local well = Scene:add_circle({
                     name = "Gravity Well",
                     position = input.point,
-                    radius = 0.45,
+                    radius = radius,
                     color = Color:rgba(111, 157, 255, 64),
                     is_static = false
-                })
-                well:set_body_type(BodyType.Dynamic);well:add_component(gravity)
-                well:set_body_type(BodyType.Kinematic)
+                });well:add_component(gravity);well:set_body_type(BodyType.Static)
                 Scene:add_attachment({
                     name = "Gravity Well",
                     component = {
@@ -73,12 +80,13 @@ function on_pointer_down(point)
                     local_position = vec2(0,0),
                     local_angle = 0,
                     image = "~/packages/@frosoto/epic_tools/tools/gravity/icon.png",
-                    size = 0.00075,
+                    size = 0.00075 * (radius / 0.45),
                     color = Color:hex(0xffffff),
                     light = {
                         color = 0xffffff,
                         intensity = 0,
-                        radius = 0,}
+                        radius = 0
+                    }
                 });
             end
         ]]
